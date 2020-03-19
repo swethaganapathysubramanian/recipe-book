@@ -1,16 +1,28 @@
 .recipe{
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 5px 20px rgb(71,71,71);
-    margin: 20px;
+    margin: 20px 300px 20px 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background: white;
-    opacity: 0.75;
+    opacity: 0.90;
     align-items: center;
     min-width: 40%;
     padding: 10px;
+    list-style: none;
 }
+
+.recipe:hover{
+    animation: pulse 1s;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.1); }
+    100% { transform: scale(1); } 
+} 
 
 .image{
     border-radius: 10%;

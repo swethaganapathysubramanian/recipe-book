@@ -4,11 +4,13 @@ import Recipe from './Recipe';
 
 const App = () => {
 
- //////
+  const APP_ID = "ce9f6c88"
+  const APP_KEY = "a12fadf3ac37e652207889c19825025b"
+
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('Pizza');
+  const [query, setQuery] = useState('Nachos');
 ;
   useEffect(()=>{
     getRecipes();
@@ -18,7 +20,7 @@ const App = () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
-
+    console.log(data.hits);
   }
 
   const updateSearch = e =>{
@@ -33,6 +35,7 @@ const App = () => {
 
   return (
      <div className="App">
+     <h1 className = "title"> <br></br>Recipe Book - Search Any Recipe</h1>
      <form onSubmit={getSearch} className="search-form">
         <input type="text" className="search-bar" value={search} onChange={updateSearch}/>
           <button type="submit" className="search-button">
@@ -47,7 +50,9 @@ const App = () => {
           calories = {recipe.recipe.calories}
           image = {recipe.recipe.image}
           ingredients = {recipe.recipe.ingredients}
+          source = {recipe.recipe.url}
         />
+        
       ))}
       </div>
     </div>
