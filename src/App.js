@@ -24,6 +24,7 @@ const App = () => {
   }
 
   const updateSearch = e =>{
+    setRecipes([]);
     setSearch(e.target.value);
   }
 
@@ -45,7 +46,7 @@ const App = () => {
         <div className="recipes">
       {recipes.map(recipe => (
         <Recipe
-          key={recipe.recipe.label}
+          key={recipe.recipe.url}
           title={recipe.recipe.label}
           calories = {recipe.recipe.calories}
           image = {recipe.recipe.image}
