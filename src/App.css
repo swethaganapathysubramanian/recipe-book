@@ -1,6 +1,7 @@
 .App{
   top: 0;
   min-height: 100vh;
+  min-width: 100%;
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;
   font-family: 'Josefin Sans', sans-serif;
 }

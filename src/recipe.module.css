@@ -1,7 +1,7 @@
 .recipe{
     border-radius: 5px;
     box-shadow: 0px 5px 20px rgb(71,71,71);
-    margin: 20px 300px 20px 300px;
+    margin: 10px 25% 1% 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -29,3 +29,9 @@
     width: 100px;
     height: 100px;
 }
+
+@media (max-width: 12450px) { 
+    .recipe{
+
+    }
+ }
